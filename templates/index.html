@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>My Todo List</h1>
+        
+        <!-- Form to add new tasks -->
+        <form action="/add" method="POST">
+            <input type="text" name="task" placeholder="Enter a new task" required>
+            <button type="submit">Add Task</button>
+        </form>
+        
+        <!-- Display all tasks -->
+        <ul>
+            {% for task in tasks %}
+                <li>
+                    {% if task.completed %}
+                        <strike>{{ task.text }}</strike> ✅
+                    {% else %}
+                        {{ task.text }}
+                    {% endif %}
+                    <div>
+                        <a href="/toggle/{{ loop.index0 }}">Toggle</a>
+                        <a href="/delete/{{ loop.index0 }}">Delete</a>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <p>Total tasks: {{ tasks|length }}</p>
+    </div>
+</body>
+</html>

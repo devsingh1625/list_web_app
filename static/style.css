@@ -1,0 +1,127 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 50%, #ff6b6b 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    text-align: center;
+    color: #d63031;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #ffeaa7;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+button {
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* Task list styling */
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+li {
+    background: rgba(255, 234, 167, 0.3);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s;
+    border-left: 4px solid #ff6b6b;
+}
+
+li:hover {
+    background: rgba(255, 234, 167, 0.5);
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.2);
+}
+
+/* Links styling */
+a {
+    color: #d63031;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+    margin-left: 10px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+a:hover {
+    background: #d63031;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Completed task styling */
+strike {
+    color: #74b9ff;
+}
+
+/* Task count styling */
+p {
+    text-align: center;
+    color: #d63031;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 500;
+}
